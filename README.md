@@ -3,6 +3,7 @@
 ![](https://github.com/basblsolver/manual/blob/master/images/BASBL-logo-landscape.png)
 
 #### Home page/repository for **B**ranch-**A**nd-**S**andwich **B**i**L**evel `BASBL` solver
+###### Solves nonconvex bilevel problems globally
 ============
 
 > For more information, see `BASBL`[wiki](https://github.com/basblsolver/manual/wiki)
