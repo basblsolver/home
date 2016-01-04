@@ -31,7 +31,10 @@
 <td><ul>
 <li><a href="#motivation">Motivation</a></li>
 <li>
-<a href="#why-basbl">Why BASBL?</a><ul><li><a href="#usage">Usage</a></li></ul>
+<a href="#why-basbl">Why BASBL?</a><ul>
+<li><a href="#command-line-interface">CLI</a></li>
+<li><a href="#usage">Usage</a></li>
+</ul>
 </li>
 <li><a href="#manual">Manual</a></li>
 <li><a href="#test-problems">Test Problems</a></li>
@@ -64,6 +67,30 @@ Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quad
 </ul>
 
 <h2>
+<a id="command-line-interface" class="anchor" href="#command-line-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command-line interface</h2>
+
+<p><code>BASBL</code> is based on command line interface and used over a terminal. The <code>BASBL</code> log output below is obtained for the bilevel model <a href="https://github.com/basblsolver/test-problems/wiki/mb_1_1_05">mb_1_1_05</a> using the outer tolerance 1e-3 and the inner tolerance 1e-5.</p>
+
+<pre><code>================================================================================
+2015-12-18        Branch-And-Sandwich BiLevel solver: BASBL v0.1        00:27:35
+================================================================================
+mb_1_1_05: Obj. val. and solution |   No of solved subp. | No of el.|  Time(s) |
+--------------------------------------------------------------------------------
+Iter    Fopt    fopt  (Xopt, Yopt)   ILB IUB  LB  UB  OVF   L  Li    GAMS  BASBL
+--------------------------------------------------------------------------------
+   0    7.96   -0.50        (1,-1)     1   1   1   1    1   1   0    0.50   0.50
+   1    7.96   -0.50        (1,-1)     3   3   3   2    3   2   0    1.15   1.18
+   2    0.00    0.00         (0,0)     5   5   5   4    7   2   1    1.89   1.98
+   3    0.00    0.00         (0,0)     7   7   7   5    9   2   0    2.46   2.63
+   4    0.00    0.00         (0,0)     9   9   9   5    9   1   2    2.92   3.18
+   5    0.00    0.00         (0,0)    11  11  11   5    9   0   0    3.35   3.71
+--------------------------------------------------------------------------------
+ BASBL Status:       *** Successful termination! ***
+   Solution: F = 0.000, f = 0.000 at (x, y) = (0.000, 0.000)
+================================================================================
+</code></pre>
+
+<h2>
 <a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <pre><code>`BASBL` solver is still under active design and development and not feature complete or ready for
@@ -73,8 +100,9 @@ consumption by anyone other than software developers.
 <h1>
 <a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual</h1>
 
-<p><code>BASBL</code> solver's manual is described on <a href="https://github.com/basblsolver/manual/wiki">manual-wiki-page</a>.
-<strong>Table of Contents</strong> of manual wiki:</p>
+<p><code>BASBL</code> solver's manual is described on <a href="https://github.com/basblsolver/manual/wiki">manual-wiki-page</a>.</p>
+
+<p>Manual-wiki's <strong>Table of Contents</strong>:</p>
 
 <ul>
 <li><a href="https://github.com/basblsolver/manual/wiki/Introduction">Introduction</a></li>
