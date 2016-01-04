@@ -30,13 +30,15 @@
 <tr>
 <td><ul>
 <li><a href="#motivation">Motivation</a></li>
-<li><a href="#why-basbl">Why BASBL?</a></li>
+<li>
+<a href="#why-basbl">Why BASBL?</a><ul><li><a href="#usage">Usage</a></li></ul>
+</li>
 <li><a href="#manual">Manual</a></li>
 <li><a href="#test-problems">Test Problems</a></li>
 <li><a href="#references">References</a></li>
 <li><a href="#contact">Contact</a></li>
 </ul></td>
-<td><img src="https://github.com/basblsolver/manual/raw/master/images/BASBL-logo-landscape.png" width="600"></td>
+<td><img src="https://github.com/basblsolver/manual/raw/master/images/BASBL-logo-landscape.png" width="570"></td>
 </tr>
 </tbody>
 </table>
@@ -53,15 +55,24 @@ Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quad
 <a id="why-basbl" class="anchor" href="#why-basbl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why BASBL?</h1>
 
 <p><strong>B</strong>ranch-<strong>A</strong>nd-<strong>S</strong>andwich <strong>B</strong>i<strong>L</strong>evel <code>BASBL</code> solver is a <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> solver for nonlinear bilevel problems.
-<code>BASBL</code> is based on a recent Branch-and-Sandwich algorithm (see <a href="#references">References</a> section for the theory behind him) which guarantees to solve a broad class of bilevel problems to global optimality. Moreover, <code>BASBL</code> is enhanced with several new techniques: reduction of overhead of the UB procedure, alternative ways to calculate tighter bounds, as well as alternative choices for branching and node selection. </p>
+<code>BASBL</code> is based on a recent Branch-and-Sandwich algorithm (see <a href="#references">References</a> section for the theory behind him) which guarantees to solve a broad class of bilevel problems to global optimality. Moreover, <code>BASBL</code> is enhanced with several new techniques: </p>
+
+<ul>
+<li>reduction of overhead of the UB procedure;</li>
+<li>alternative ways to calculate tighter bounds;</li>
+<li>alternative choices for branching and node selection. </li>
+</ul>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
 
 <p><strong>Important</strong>: <code>BASBL</code> solver is still under active design and development and not feature complete or ready for consumption by anyone other than software developers.</p>
 
 <h1>
 <a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual</h1>
 
-<p><code>BASBL</code> solver's manual is described on <a href="https://github.com/basblsolver/manual/wiki">basbl-manual</a> wiki-page
-<strong>Table of Contents</strong> of the wiki:</p>
+<p><code>BASBL</code> solver's manual is described on <a href="https://github.com/basblsolver/manual/wiki">manual-wiki-page</a>.
+<strong>Table of Contents</strong> of manual wiki:</p>
 
 <ul>
 <li><a href="https://github.com/basblsolver/manual/wiki/Introduction">Introduction</a></li>
