@@ -52,13 +52,13 @@
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h1>
 
 <p>Solving <em>nonlinear</em> bilevel problems to global optimality is a long-standing challenge in optimization theory. 
-Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quadratic</em>) – <em>linear</em> (<em>quadratic</em>) type, have been studied extensively and many algorithms have been proposed in the literature (<a href="http://dx.doi.org/10.1007/b101970">Dempe, 2002</a>; <a href="http://dx.doi.org/10.1007/s10898-008-9332-8">Floudas and Gounaris, 2009</a>). However, the general nonconvex form is very challenging and only recently the first deterministic method was proposed by (<a href="http://dx.doi.org/10.1007/s10898-007-9260-z">Mitsos et al., 2008</a>).</p>
+Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quadratic</em>) – <em>linear</em> (<em>quadratic</em>) type, have been studied extensively and many algorithms have been proposed in the literature (<a href="http://dx.doi.org/10.1007/b101970">Dempe, 2002</a>; <a href="http://dx.doi.org/10.1007/s10898-008-9332-8">Floudas and Gounaris, 2009</a>). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by (<a href="http://dx.doi.org/10.1007/s10898-007-9260-z">Mitsos et al., 2008</a>). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, <strong>Branch-and-Sandwich</strong>, was proposed by <a href="http://dx.doi.org/10.1007/s10898-013-0121-7">Kleniati and Adjiman (2014a)</a>,<a href="http://dx.doi.org/10.1007/s10898-013-0120-8">b)</a> to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work (<a href="http://dx.doi.org/10.1016/j.compchemeng.2014.06.004">Kleniati and Adjiman, 2015</a>), in which the algorithm was also extended to include binary variables in the outer and inner problems.</p>
 
 <h1>
 <a id="why-basbl" class="anchor" href="#why-basbl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why BASBL?</h1>
 
-<p><strong>B</strong>ranch-<strong>A</strong>nd-<strong>S</strong>andwich <strong>B</strong>i<strong>L</strong>evel <code>BASBL</code> solver is a <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> solver for nonlinear bilevel problems.
-<code>BASBL</code> is based on a recent Branch-and-Sandwich algorithm (see <a href="#references">References</a> section for the theory behind him) which guarantees to solve a broad class of bilevel problems to global optimality. Moreover, <code>BASBL</code> is enhanced with several new techniques: </p>
+<p><strong>B</strong>ranch-<strong>A</strong>nd-<strong>S</strong>andwich <strong>B</strong>i<strong>L</strong>evel <code>BASBL</code> solver is a <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> is a <code>C++</code> solver for nonlinear bilevel problems, based on the <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> framework.
+<code>BASBL</code> is based on the recent Branch-and-Sandwich algorithm (see <a href="#references">References</a> section for the underlying theory), which is guaranteed to solve a broad class of bilevel problems to global optimality within epsilon convergence in finite time. Moreover, <code>BASBL</code> is enhanced with several new techniques: </p>
 
 <ul>
 <li>reduction of overhead of the UB procedure;</li>
@@ -140,12 +140,11 @@ consumption by anyone other than software developers.
 </tbody>
 </table>
 
-<p>If you use this set, please <strong>cite</strong>: </p>
+<p>If you use this set, please <strong>cite</strong> the following sources: </p>
 
 <ol>
-<li>
-<em>A Test Set of Nonconvex Bilevel Problems</em> (2015) Zenodo. 
-<a href="https://zenodo.org/badge/latestdoi/19541/basblsolver/test-problems"><img src="https://zenodo.org/badge/19541/basblsolver/test-problems.svg" alt="DOI"></a>
+<li>Remigijus Paulavicius et al.. (2016). A Test Set of Nonconvex Bilevel Problems. Zenodo.
+<a href="http://dx.doi.org/10.5281/zenodo.44997"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.44997.svg" alt="DOI"></a>
 </li>
 <li>Mitsos, A. and Barton, P.I. <a href="https://www.researchgate.net/publication/228455291_A_test_set_for_bilevel_programs">A Test Set for Bilevel Programs</a> <em>Tech. Report</em>, Massachusetts Institute of Technology, 2007.</li>
 </ol>
@@ -245,6 +244,16 @@ consumption by anyone other than software developers.
 
     </section>
 
-  
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-72629346-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
