@@ -49,15 +49,15 @@
 <hr>
 
 <h1>
-<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Motivation</h1>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h1>
 
 <p>Solving <em>nonlinear</em> bilevel problems to global optimality is a long-standing challenge in optimization theory. 
 Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quadratic</em>) – <em>linear</em> (<em>quadratic</em>) type, have been studied extensively and many algorithms have been proposed in the literature (<a href="http://dx.doi.org/10.1007/b101970">Dempe, 2002</a>; <a href="http://dx.doi.org/10.1007/s10898-008-9332-8">Floudas and Gounaris, 2009</a>). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by (<a href="http://dx.doi.org/10.1007/s10898-007-9260-z">Mitsos et al., 2008</a>). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, <strong>Branch-and-Sandwich</strong>, was proposed by <a href="http://dx.doi.org/10.1007/s10898-013-0121-7">Kleniati and Adjiman (2014a)</a>,<a href="http://dx.doi.org/10.1007/s10898-013-0120-8">b)</a> to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work (<a href="http://dx.doi.org/10.1016/j.compchemeng.2014.06.004">Kleniati and Adjiman, 2015</a>), in which the algorithm was also extended to include binary variables in the outer and inner problems.</p>
 
 <h1>
-<a id="why-basbl" class="anchor" href="#why-basbl" aria-hidden="true"><span class="octicon octicon-link"></span></a>Why BASBL?</h1>
+<a id="why-basbl" class="anchor" href="#why-basbl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why BASBL?</h1>
 
-<p><strong>B</strong>ranch-<strong>A</strong>nd-<strong>S</strong>andwich <strong>B</strong>i<strong>L</strong>evel <code>BASBL</code> solver is a <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> is a <code>C++</code> solver for nonlinear bilevel problems, based on the <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> framework.
+<p><strong>B</strong>ranch-<strong>A</strong>nd-<strong>S</strong>andwich <strong>B</strong>i<strong>L</strong>evel <code>BASBL</code> solver is a <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> <code>C++</code> solver for nonlinear bilevel problems, based on the <a href="https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR">MINOTAUR</a> framework.
 <code>BASBL</code> is based on the recent Branch-and-Sandwich algorithm (see <a href="#references">References</a> section for the underlying theory), which is guaranteed to solve a broad class of bilevel problems to global optimality within epsilon convergence in finite time. Moreover, <code>BASBL</code> is enhanced with several new techniques: </p>
 
 <ul>
@@ -69,7 +69,7 @@ Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quad
 <p>Finally, <code>BASBL</code> solver's project is active therefore, more extensions and enhancements will be added soon!</p>
 
 <h2>
-<a id="command-line-interface" class="anchor" href="#command-line-interface" aria-hidden="true"><span class="octicon octicon-link"></span></a>Command-line interface</h2>
+<a id="command-line-interface" class="anchor" href="#command-line-interface" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Command-line interface</h2>
 
 <p><code>BASBL</code> is based on command line interface and used over a terminal. The <code>BASBL</code> output below is obtained for the bilevel model <a href="https://github.com/basblsolver/test-problems/wiki/mb_1_1_05">mb_1_1_05</a> using the outer tolerance 1e-3 and the inner tolerance 1e-5.</p>
 
@@ -93,14 +93,14 @@ Iter    Fopt    fopt  (Xopt, Yopt)   ILB IUB  LB  UB  OVF   L  Li    GAMS  BASBL
 </code></pre>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Usage</h2>
 
 <pre><code>`BASBL` solver is still under active design and development and not feature complete
 or ready for consumption by anyone other than software developers.
 </code></pre>
 
 <h1>
-<a id="manual" class="anchor" href="#manual" aria-hidden="true"><span class="octicon octicon-link"></span></a>Manual</h1>
+<a id="manual" class="anchor" href="#manual" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manual</h1>
 
 <p><code>BASBL</code> solver's manual is described on <a href="https://github.com/basblsolver/manual/wiki">manual-wiki-page</a>.</p>
 
@@ -114,7 +114,7 @@ or ready for consumption by anyone other than software developers.
 </ul>
 
 <h1>
-<a id="test-problems" class="anchor" href="#test-problems" aria-hidden="true"><span class="octicon octicon-link"></span></a>Test Problems</h1>
+<a id="test-problems" class="anchor" href="#test-problems" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test Problems</h1>
 
 <p>Description of nonconvex bilevel test problems in <code>AMPL</code> format, compatible with <code>BASBL v0.1</code> is provided on <a href="https://github.com/basblsolver/test-problems/wiki">bilevel-test-problems</a> wiki-page. This <strong>wiki</strong> provides:</p>
 
@@ -151,7 +151,7 @@ or ready for consumption by anyone other than software developers.
 </ol>
 
 <h1>
-<a id="references" class="anchor" href="#references" aria-hidden="true"><span class="octicon octicon-link"></span></a>References</h1>
+<a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h1>
 
 <ul>
 <li><strong>Branch-and-Sandwich: a deterministic global optimization algorithm for optimistic bilevel programming problems. Part I: Theoretical development</strong></li>
@@ -223,7 +223,7 @@ or ready for consumption by anyone other than software developers.
 </code></pre>
 
 <h1>
-<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contact</h1>
+<a id="contact" class="anchor" href="#contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact</h1>
 
 <table>
 <thead>
