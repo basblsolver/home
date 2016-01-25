@@ -27,8 +27,10 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><ul>
+</tbody>
+</table>
+
+<p></p><ul>
 <li><a href="#motivation">Motivation</a></li>
 <li>
 <a href="#why-basbl">Why BASBL?</a><ul>
@@ -37,14 +39,16 @@
 </ul>
 </li>
 <li><a href="#manual">Manual</a></li>
-<li><a href="#test-problems">Test Problems</a></li>
+<li>
+<a href="#test-problems">Test Problems</a><ul>
+<li><a href="#citation">Citation</a></li>
+<li><a href="#important-notice">Important Notice
+</a></li>
+</ul>
+</li>
 <li><a href="#references">References</a></li>
 <li><a href="#contact">Contact</a></li>
-</ul></td>
-<td><img src="https://github.com/basblsolver/manual/raw/master/images/BASBL-logo-landscape.png" width="570"></td>
-</tr>
-</tbody>
-</table>
+</ul> | <img src="https://github.com/basblsolver/manual/raw/master/images/BASBL-logo-landscape.png" width="570">
 
 <hr>
 
@@ -52,7 +56,7 @@
 <a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h1>
 
 <p>Solving <em>nonlinear</em> bilevel problems to global optimality is a long-standing challenge in optimization theory. 
-Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quadratic</em>) – <em>linear</em> (<em>quadratic</em>) type, have been studied extensively and many algorithms have been proposed in the literature (<a href="http://dx.doi.org/10.1007/b101970">Dempe, 2002</a>; <a href="http://dx.doi.org/10.1007/s10898-008-9332-8">Floudas and Gounaris, 2009</a>). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by (<a href="http://dx.doi.org/10.1007/s10898-007-9260-z">Mitsos et al., 2008</a>). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, <strong>Branch-and-Sandwich</strong>, was proposed by <a href="http://dx.doi.org/10.1007/s10898-013-0121-7">Kleniati and Adjiman (2014a)</a>,<a href="http://dx.doi.org/10.1007/s10898-013-0120-8">b)</a> to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work (<a href="http://dx.doi.org/10.1016/j.compchemeng.2014.06.004">Kleniati and Adjiman, 2015</a>), in which the algorithm was also extended to include binary variables in the outer and inner problems.</p>
+Special cases of bilevel problems, such as problems of <em>linear</em> (<em>quadratic</em>) – <em>linear</em> (<em>quadratic</em>) type, have been studied extensively and many algorithms have been proposed in the literature (<a href="http://dx.doi.org/10.1007/b101970">Dempe, 2002</a>; <a href="http://dx.doi.org/10.1007/s10898-008-9332-8">Floudas and Gounaris, 2009</a>). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by (<a href="http://dx.doi.org/10.1007/s10898-007-9260-z">Mitsos et al., 2008</a>). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, <strong>Branch-and-Sandwich</strong>, was proposed by <a href="http://dx.doi.org/10.1007/s10898-013-0121-7,%5Bb">Kleniati and Adjiman (2014a)</a>](<a href="http://dx.doi.org/10.1007/s10898-013-0120-8">http://dx.doi.org/10.1007/s10898-013-0120-8</a>) to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work (<a href="http://dx.doi.org/10.1016/j.compchemeng.2014.06.004">Kleniati and Adjiman, 2015</a>), in which the algorithm was also extended to include binary variables in the outer and inner problems.</p>
 
 <h1>
 <a id="why-basbl" class="anchor" href="#why-basbl" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why BASBL?</h1>
@@ -142,13 +146,47 @@ or ready for consumption by anyone other than software developers.
 </tbody>
 </table>
 
-<p>If you use this set, please <strong>cite</strong> the following sources: </p>
+<h3>
+<a id="citation" class="anchor" href="#citation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Citation</h3>
 
-<ol>
+<p>If you use this library, please cite the following sources: </p>
+
+<ul>
 <li>Remigijus Paulavicius et al.. (2016). A library of nonconvex bilevel test problems with the corresponding AMPL input files. Zenodo. <a href="http://dx.doi.org/10.5281/zenodo.44997"><img src="https://zenodo.org/badge/doi/10.5281/zenodo.44997.svg" alt="DOI"></a>
 </li>
+</ul>
+
+<pre><code>@misc{remigijus_paulavicius_2016_44997,
+  author       = {Remigijus Paulavicius and
+                  Polyxeni-M. Kleniati and
+                  Claire S. Adjiman},
+  title        = {{A library of nonconvex bilevel test problems with 
+                   the corresponding AMPL input files}},
+  month        = jan,
+  year         = 2016,
+  doi          = {10.5281/zenodo.44997},
+  url          = {http://dx.doi.org/10.5281/zenodo.44997}
+}
+</code></pre>
+
+<ul>
 <li>Mitsos, A. and Barton, P.I. <a href="https://www.researchgate.net/publication/228455291_A_test_set_for_bilevel_programs">A Test Set for Bilevel Programs</a> <em>Tech. Report</em>, Massachusetts Institute of Technology, 2007.</li>
-</ol>
+</ul>
+
+<pre><code>@misc{mitsos2007test,
+  title     = {A test set for bilevel programs},
+  author    = {Mitsos, Alexander and Barton, Paul I},
+  year      = {2007},
+  publisher = {Technical report, Massachusetts Institute of Technology}
+}
+</code></pre>
+
+<h3>
+<a id="important-notice" class="anchor" href="#important-notice" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Important Notice</h3>
+
+<p>Kindly note, that this is a growing collection of nonconvex bilevel problems meant as a resource
+for researchers in the field, including problem statement, analysis, solution(s) and input file(s). 
+<strong>We welcome contributions and corrections to this resource!</strong> </p>
 
 <h1>
 <a id="references" class="anchor" href="#references" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h1>
