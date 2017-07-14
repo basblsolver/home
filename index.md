@@ -1,18 +1,10 @@
 # Motivation for the solver
-
-Solving _nonlinear_ bilevel problems to global optimality is a long-standing challenge in optimization theory. 
-Special cases of bilevel problems, such as problems of _linear_ (_quadratic_) – _linear_ (_quadratic_) type, have been studied extensively and many algorithms have been proposed in the literature ([Dempe, 2002](http://dx.doi.org/10.1007/b101970); [Floudas and Gounaris, 2009](http://dx.doi.org/10.1007/s10898-008-9332-8)). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by ([Mitsos et al., 2008](http://dx.doi.org/10.1007/s10898-007-9260-z)). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, __Branch-and-Sandwich__, was proposed by [Kleniati and Adjiman (2014a)](http://dx.doi.org/10.1007/s10898-013-0121-7,[b)](http://dx.doi.org/10.1007/s10898-013-0120-8) to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work ([Kleniati and Adjiman, 2015](http://dx.doi.org/10.1016/j.compchemeng.2014.06.004)), in which the algorithm was also extended to include binary variables in the outer and inner problems.
-
-# Why BASBL?
-
-**B**ranch-**A**nd-**S**andwich **B**i**L**evel `BASBL` solver is a [MINOTAUR](https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR) `C++` solver for nonlinear bilevel problems, based on the [MINOTAUR](https://wiki.mcs.anl.gov/minotaur/index.php/MINOTAUR) framework.
-`BASBL` is based on the recent Branch-and-Sandwich algorithm (see [References](#references) section for the underlying theory), which is guaranteed to solve a broad class of bilevel problems to global optimality within epsilon convergence in finite time. Moreover, `BASBL` is enhanced with several new techniques: 
-
-* reduction of overhead of the UB procedure;
-* alternative ways to calculate tighter bounds;
-* alternative choices for branching and node selection. 
-
-Finally, `BASBL` solver's project is active therefore, more extensions and enhancements will be added soon!
+While bilevel programming problem (BPP) has been studied for a long time, the few software codes that are currently available are mainly limited to special subclasses. 
+ - The bilevel solver in `YALMIP` (language for advanced modeling and solution of convex and nonconvex optimization problems) [51] is restricted to convex quadratic inner problems, but convexity is not a requirement on the outer problem. 
+ - Similarly, `BIPA` (BIlevel Programming with Approximation methods), a software based on a trust-region method for nonlinear bilevel programming problems, requires function to be convex in y for each fixed value of x. 
+ - The `EMP` (Extended Mathematical Programming) tool in `GAMS` (General Algebraic Modeling System) automatically creates an MPEC (Mathematical Program with Equilibrium Constraints) by expressing the lower level optimization problem via its Karush-Kuhn-Tucker (KKT) optimality conditions and finds a solution of the MPEC, not of the bilevel program. If the lower level program is nonconvex, the optimal solution of a bilevel problem may not even be a stationary point of the reduced single-level optimization problem. Thus this solver is limited to bilevel problems with a convex inner problem that meets a constraint qualification.
+- To handle general bilevel problems that do not adhere to the simplifying assumptions required by these deterministic solvers, two evolutionary-based algorithms, that have been implemented in `MATLAB`, are available (http://www.bilevel.org/).
+To address the lack of general deterministic bilevel solvers, we introduce the first implementation of our bilevel solver capable of handling very general (BPP) problems. The solver presented here, Branch-And-Sandwich BiLevel algorithm (`BASBL`), is based on this latter work. It is implemented within the open-source `MINOTAUR` toolkit.
 
 ## Command-line interface
 `BASBL` is based on command line interface and used over a terminal. The `BASBL` output below is obtained for the bilevel model [mb_1_1_05](https://github.com/basblsolver/test-problems/wiki/mb_1_1_05) using the outer tolerance 1e-3 and the inner tolerance 1e-5.
