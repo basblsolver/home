@@ -1,10 +1,5 @@
-| Table of Contents |                  |
-| ----------------- | ---------------- | 
-<ul><li>[Motivation](#motivation)</li><li>[Why BASBL?](#why-basbl)<ul><li>[CLI](#command-line-interface)</li><li>[Usage](#usage)</li></ul></li><li>[Manual](#manual)</li><li>[Test Problems](#test-problems)<ul><li>[Citation](#citation)</li></ul></li><li>[References](#references)</li><li>[Contact](#contact)</li></ul> | <img src="https://github.com/basblsolver/manual/raw/master/images/BASBL-logo-landscape.png" width="570">
+# Motivation for the BASBL solver
 
-----
-
-# Motivation
 Solving _nonlinear_ bilevel problems to global optimality is a long-standing challenge in optimization theory. 
 Special cases of bilevel problems, such as problems of _linear_ (_quadratic_) – _linear_ (_quadratic_) type, have been studied extensively and many algorithms have been proposed in the literature ([Dempe, 2002](http://dx.doi.org/10.1007/b101970); [Floudas and Gounaris, 2009](http://dx.doi.org/10.1007/s10898-008-9332-8)). However, the general nonconvex form is very challenging and only recently the first deterministic method to solve a general class of nonconvex problems to global optimality was proposed by ([Mitsos et al., 2008](http://dx.doi.org/10.1007/s10898-007-9260-z)). This class includes problems in which the outer and inner problems may contain nonconvex functions, provided that the inner problem does not contain equality constraints. Another algorithm, __Branch-and-Sandwich__, was proposed by [Kleniati and Adjiman (2014a)](http://dx.doi.org/10.1007/s10898-013-0121-7,[b)](http://dx.doi.org/10.1007/s10898-013-0120-8) to find the global solution of problems in which the outer and inner problems may contain nonconvex functions and include equality constraints, with the provision that a constraint qualification holds for the inner problem. This restriction was lifted in later work ([Kleniati and Adjiman, 2015](http://dx.doi.org/10.1016/j.compchemeng.2014.06.004)), in which the algorithm was also extended to include binary variables in the outer and inner problems.
 
